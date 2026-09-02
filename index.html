@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DEXTRA Supply & Distribution — Mitra terpercaya, solusi terpadu untuk parfum dan kebutuhan bisnis.">
+    <meta name="theme-color" content="#0B1F3A">
+    <title>DEXTRA SUPPLY & DISTRIBUTION — Mitra Terpercaya, Solusi Terpadu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            50: "#eef3f8",
+                            100: "#dce6f0",
+                            200: "#b9cadb",
+                            300: "#8fa8bf",
+                            400: "#617f9d",
+                            500: "#3d5d7e",
+                            600: "#294a6c",
+                            700: "#1d3a58",
+                            800: "#142d47",
+                            900: "#0B1F3A"
+                        },
+                        gold: {
+                            400: "#E4C765",
+                            500: "#D4AF37",
+                            600: "#B99524"
+                        }
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                        serif: ["Playfair Display", "serif"]
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        html { scroll-padding-top: 88px; }
+        body { background:#fff; }
+        .fade-up { opacity:0; transform:translateY(20px); animation:fadeUp .7s ease forwards; }
+        @keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+        .hero-glow { background:radial-gradient(circle, rgba(212,175,55,.18) 0%, rgba(11,31,58,0) 68%); }
+        .gold-line { background:linear-gradient(90deg,#D4AF37,rgba(212,175,55,0)); }
+        .product-card { transition:transform .25s ease, box-shadow .25s ease; }
+        .product-card:hover { transform:translateY(-5px); box-shadow:0 20px 45px rgba(11,31,58,.12); }
+        .nav-scrolled { box-shadow:0 8px 30px rgba(11,31,58,.08); background:rgba(255,255,255,.96)!important; }
+    </style>
+</head>
+
+<body class="font-sans text-slate-800 antialiased selection:bg-gold-500 selection:text-navy-900">
+
+<!-- NAVBAR -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/70 transition-all">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 py-4 flex items-center justify-between">
+        <a href="#beranda" class="flex items-center gap-3 group">
+            <span class="w-10 h-10 rounded-xl bg-navy-900 text-gold-500 flex items-center justify-center font-serif font-bold text-lg">D</span>
+            <span>
+                <span class="block font-bold tracking-wide text-navy-900 leading-none">DEXTRA</span>
+                <span class="block text-[9px] tracking-[.22em] text-slate-500 mt-1">SUPPLY & DISTRIBUTION</span>
+            </span>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-600">
+            <a href="#beranda" class="hover:text-navy-900 transition">Beranda</a>
+            <a href="#tentang" class="hover:text-navy-900 transition">Tentang</a>
+            <a href="#produk" class="hover:text-navy-900 transition">Produk</a>
+            <a href="#kemitraan" class="hover:text-navy-900 transition">Kemitraan</a>
+            <a href="#kontak" class="hover:text-navy-900 transition">Kontak</a>
+        </nav>
+
+        <a href="https://wa.me/6282331865090?text=Halo%20DEXTRA,%20saya%20ingin%20melihat%20katalog%20dan%20harga%20produk." target="_blank"
+           class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-navy-900 text-white text-xs font-semibold hover:bg-navy-800 transition shadow-lg shadow-navy-900/15">
+            Hubungi DEXTRA
+        </a>
+
+        <button id="mobile-menu-btn" class="lg:hidden w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center text-navy-900" aria-label="Buka menu">
+            <svg id="menu-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <svg id="menu-close" class="hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 px-5 py-5 space-y-3">
+        <a href="#beranda" class="mobile-link block py-2 font-medium">Beranda</a>
+        <a href="#tentang" class="mobile-link block py-2 font-medium">Tentang</a>
+        <a href="#produk" class="mobile-link block py-2 font-medium">Produk</a>
+        <a href="#kemitraan" class="mobile-link block py-2 font-medium">Kemitraan</a>
+        <a href="#kontak" class="mobile-link block py-2 font-medium">Kontak</a>
+        <a href="https://wa.me/6282331865090?text=Halo%20DEXTRA,%20saya%20ingin%20melihat%20katalog%20produk." target="_blank" class="block text-center py-3 rounded-xl bg-navy-900 text-white font-semibold">Chat WhatsApp</a>
+    </div>
+</header>
+
+<!-- HERO -->
+<section id="beranda" class="relative overflow-hidden bg-navy-900 text-white pt-32 pb-20 md:pt-40 md:pb-28">
+    <div class="absolute inset-0 hero-glow pointer-events-none"></div>
+    <div class="absolute right-[-120px] top-[-120px] w-[420px] h-[420px] rounded-full border border-gold-500/10"></div>
+    <div class="absolute right-[-60px] top-[-60px] w-[300px] h-[300px] rounded-full border border-gold-500/10"></div>
+
+    <div class="relative max-w-7xl mx-auto px-5 sm:px-6 grid lg:grid-cols-2 gap-14 items-center">
+        <div class="fade-up">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-gold-400 text-[10px] font-bold tracking-[.18em] uppercase">
+                Supply • Distribution • Business Solution
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.08] mt-6">
+                Mitra Terpercaya,<br><span class="text-gold-500">Solusi Terpadu.</span>
+            </h1>
+
+            <p class="mt-6 max-w-xl text-slate-300 leading-8 text-sm sm:text-base">
+                DEXTRA Supply & Distribution hadir untuk menyediakan produk parfum dan solusi kebutuhan bisnis dengan proses yang praktis, harga kompetitif, dan layanan yang berorientasi pada mitra.
+            </p>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                <a href="#produk" class="inline-flex justify-center items-center px-7 py-3.5 rounded-xl bg-gold-500 text-navy-900 font-bold text-sm hover:bg-gold-400 transition">
+                    Lihat Produk
+                </a>
+                <a href="#kemitraan" class="inline-flex justify-center items-center px-7 py-3.5 rounded-xl border border-white/20 text-white font-semibold text-sm hover:bg-white/10 transition">
+                    Program Kemitraan
+                </a>
+            </div>
+
+            <div class="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-xs text-slate-400">
+                <span>✓ Harga kompetitif</span>
+                <span>✓ Cocok untuk reseller</span>
+                <span>✓ Konsultasi via WhatsApp</span>
+            </div>
+        </div>
+
+        <div class="relative">
+            <div class="absolute inset-0 bg-gold-500/10 blur-3xl rounded-full"></div>
+            <div class="relative rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=85&w=1000"
+                     alt="Ilustrasi produk parfum DEXTRA" class="w-full h-[430px] sm:h-[520px] object-cover">
+                <div class="absolute bottom-5 left-5 right-5 bg-navy-900/90 backdrop-blur-md border border-white/10 rounded-2xl p-5">
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <p class="text-[10px] tracking-[.2em] text-gold-400 uppercase">DEXTRA</p>
+                            <p class="font-serif text-xl mt-1">Supply & Distribution</p>
+                        </div>
+                        <span class="text-xs text-slate-400">Since 2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="border-b border-slate-100 bg-white">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div><p class="text-2xl font-bold text-navy-900">20ml</p><p class="text-xs text-slate-500 mt-1">Pilihan ukuran</p></div>
+        <div><p class="text-2xl font-bold text-navy-900">30ml</p><p class="text-xs text-slate-500 mt-1">Pilihan ukuran</p></div>
+        <div><p class="text-2xl font-bold text-navy-900">50ml</p><p class="text-xs text-slate-500 mt-1">Pilihan ukuran</p></div>
+        <div><p class="text-2xl font-bold text-navy-900">B2B</p><p class="text-xs text-slate-500 mt-1">Reseller & agen</p></div>
+    </div>
+</section>
+
+<!-- TENTANG -->
+<section id="tentang" class="py-20 md:py-28 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 grid lg:grid-cols-2 gap-14 items-center">
+        <div class="relative">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=85&w=1000"
+                 alt="Ilustrasi proses parfum" class="w-full h-[390px] md:h-[500px] object-cover rounded-[2rem]">
+            <div class="absolute -bottom-5 -right-3 md:right-6 bg-white rounded-2xl shadow-xl border border-slate-100 p-5 max-w-[220px]">
+                <p class="text-[10px] uppercase tracking-[.2em] text-gold-600 font-bold">Positioning</p>
+                <p class="font-serif text-lg text-navy-900 mt-1">Mitra untuk tumbuh bersama.</p>
+            </div>
+        </div>
+
+        <div>
+            <p class="text-gold-600 text-xs font-bold tracking-[.2em] uppercase">Tentang DEXTRA</p>
+            <h2 class="font-serif text-3xl md:text-5xl text-navy-900 mt-4 leading-tight">
+                Bukan hanya menjual produk. Kami membangun jalur distribusi.
+            </h2>
+            <div class="w-20 h-1 gold-line mt-6"></div>
+            <p class="text-slate-600 leading-8 mt-7">
+                DEXTRA SUPPLY & DISTRIBUTION dikembangkan sebagai partner penyedia produk dan kebutuhan usaha, dengan fokus pada parfum, supply, serta pengembangan jaringan reseller dan agen.
+            </p>
+            <p class="text-slate-600 leading-8 mt-4">
+                Kami mengutamakan produk yang mudah dipasarkan, harga yang masuk akal, dan komunikasi yang cepat agar mitra dapat bergerak lebih efektif.
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-4 mt-8">
+                <div class="bg-white border border-slate-200 rounded-2xl p-5">
+                    <p class="font-bold text-navy-900">Praktis</p>
+                    <p class="text-xs text-slate-500 mt-2">Proses pemesanan sederhana melalui WhatsApp.</p>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-2xl p-5">
+                    <p class="font-bold text-navy-900">Berorientasi Mitra</p>
+                    <p class="text-xs text-slate-500 mt-2">Dirancang untuk kebutuhan pengguna dan pelaku usaha.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PRODUK -->
+<section id="produk" class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div>
+                <p class="text-gold-600 text-xs font-bold tracking-[.2em] uppercase">Katalog Parfum</p>
+                <h2 class="font-serif text-3xl md:text-5xl text-navy-900 mt-3">Pilihan Ukuran & Harga</h2>
+                <p class="text-slate-500 text-sm mt-4 max-w-xl">Harga yang ditampilkan adalah harga yang tersedia pada data DEXTRA saat halaman ini diperbarui. Untuk stok dan aroma, konfirmasi melalui WhatsApp.</p>
+            </div>
+            <a href="https://wa.me/6282331865090?text=Halo%20DEXTRA,%20boleh%20minta%20katalog%20parfum%20dan%20stok%20terbaru%3F" target="_blank"
+               class="shrink-0 inline-flex items-center justify-center px-5 py-3 rounded-xl bg-navy-900 text-white text-sm font-semibold hover:bg-navy-800 transition">
+                Minta Katalog Terbaru
+            </a>
+        </div>
+
+        <div id="product-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+</section>
+
+<!-- KEMITRAAN -->
+<section id="kemitraan" class="py-20 md:py-28 bg-navy-900 text-white overflow-hidden relative">
+    <div class="absolute right-0 top-0 w-96 h-96 rounded-full bg-gold-500/10 blur-3xl"></div>
+    <div class="relative max-w-7xl mx-auto px-5 sm:px-6">
+        <div class="max-w-3xl">
+            <p class="text-gold-400 text-xs font-bold tracking-[.2em] uppercase">Reseller & Agen</p>
+            <h2 class="font-serif text-3xl md:text-5xl mt-3">Bangun penjualan bersama DEXTRA.</h2>
+            <p class="text-slate-300 leading-8 mt-5">Pilih model kemitraan sesuai kemampuan modal dan target penjualan. Detail stok, margin, dan ketentuan terbaru dapat dikonfirmasi langsung kepada tim DEXTRA.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-5 mt-12">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-7">
+                <p class="text-gold-400 text-xs font-bold uppercase tracking-wider">01</p>
+                <h3 class="font-serif text-2xl mt-3">Modal</h3>
+                <p class="text-sm text-slate-400 mt-3 leading-7">Model untuk mitra yang ingin memiliki stok dan menjalankan penjualan secara mandiri.</p>
+            </div>
+            <div class="rounded-2xl border border-gold-500/40 bg-gold-500/10 p-7">
+                <p class="text-gold-400 text-xs font-bold uppercase tracking-wider">02</p>
+                <h3 class="font-serif text-2xl mt-3">Non-Modal + Target</h3>
+                <p class="text-sm text-slate-300 mt-3 leading-7">Model kemitraan berbasis target dengan komisi sesuai program yang berlaku.</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-7">
+                <p class="text-gold-400 text-xs font-bold uppercase tracking-wider">03</p>
+                <h3 class="font-serif text-2xl mt-3">Non-Modal</h3>
+                <p class="text-sm text-slate-400 mt-3 leading-7">Pilihan untuk mulai menjual tanpa menyimpan stok sendiri, dengan ketentuan program yang berlaku.</p>
+            </div>
+        </div>
+
+        <div class="mt-10">
+            <a href="https://wa.me/6282331865090?text=Halo%20DEXTRA,%20saya%20tertarik%20menjadi%20reseller%2Fagen.%20Mohon%20info%20program%20kemitraan%20terbaru." target="_blank"
+               class="inline-flex items-center justify-center px-7 py-3.5 rounded-xl bg-gold-500 text-navy-900 font-bold text-sm hover:bg-gold-400 transition">
+                Tanya Program Kemitraan
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- KEUNGGULAN -->
+<section class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto">
+            <p class="text-gold-600 text-xs font-bold tracking-[.2em] uppercase">Kenapa DEXTRA?</p>
+            <h2 class="font-serif text-3xl md:text-4xl text-navy-900 mt-3">Dibuat untuk mempermudah pembelian dan kemitraan.</h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
+            <div class="bg-white border border-slate-200 rounded-2xl p-6">
+                <div class="w-11 h-11 rounded-xl bg-navy-900 text-gold-500 flex items-center justify-center font-bold">01</div>
+                <h3 class="font-bold text-navy-900 mt-5">Harga Kompetitif</h3>
+                <p class="text-xs text-slate-500 leading-6 mt-2">Pilihan harga untuk kebutuhan pemakaian maupun usaha.</p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-2xl p-6">
+                <div class="w-11 h-11 rounded-xl bg-navy-900 text-gold-500 flex items-center justify-center font-bold">02</div>
+                <h3 class="font-bold text-navy-900 mt-5">Pilihan Ukuran</h3>
+                <p class="text-xs text-slate-500 leading-6 mt-2">Tersedia ukuran 20ml, 30ml, dan 50ml pada katalog parfum.</p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-2xl p-6">
+                <div class="w-11 h-11 rounded-xl bg-navy-900 text-gold-500 flex items-center justify-center font-bold">03</div>
+                <h3 class="font-bold text-navy-900 mt-5">Siap untuk Reseller</h3>
+                <p class="text-xs text-slate-500 leading-6 mt-2">Ada opsi kemitraan untuk yang ingin mengembangkan penjualan.</p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-2xl p-6">
+                <div class="w-11 h-11 rounded-xl bg-navy-900 text-gold-500 flex items-center justify-center font-bold">04</div>
+                <h3 class="font-bold text-navy-900 mt-5">Order via WhatsApp</h3>
+                <p class="text-xs text-slate-500 leading-6 mt-2">Konsultasi aroma, stok, dan pemesanan dapat dilakukan langsung.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- KONTAK -->
+<section id="kontak" class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6">
+        <div class="grid lg:grid-cols-2 gap-10">
+            <div>
+                <p class="text-gold-600 text-xs font-bold tracking-[.2em] uppercase">Hubungi DEXTRA</p>
+                <h2 class="font-serif text-3xl md:text-5xl text-navy-900 mt-3">Butuh produk atau ingin menjadi mitra?</h2>
+                <p class="text-slate-500 leading-8 mt-5 max-w-lg">Kirim kebutuhanmu. Tim DEXTRA dapat membantu memberikan informasi katalog, harga, stok, dan program kemitraan.</p>
+
+                <div class="mt-8 space-y-4">
+                    <a href="https://wa.me/6282331865090" target="_blank" class="flex items-center gap-4 p-4 rounded-2xl border border-slate-200 hover:border-navy-900 transition">
+                        <span class="w-11 h-11 rounded-xl bg-navy-900 text-gold-500 flex items-center justify-center font-bold">WA</span>
+                        <span><span class="block text-xs text-slate-400">WhatsApp</span><span class="block font-semibold text-navy-900">+62 823-3186-5090</span></span>
+                    </a>
+                    <a href="mailto:dextrasupplyd@gmail.com" class="flex items-center gap-4 p-4 rounded-2xl border border-slate-200 hover:border-navy-900 transition">
+                        <span class="w-11 h-11 rounded-xl bg-navy-900 text-gold-500 flex items-center justify-center font-bold">@</span>
+                        <span><span class="block text-xs text-slate-400">Email</span><span class="block font-semibold text-navy-900">dextrasupplyd@gmail.com</span></span>
+                    </a>
+                </div>
+            </div>
+
+            <form id="contact-form" class="rounded-3xl bg-slate-50 border border-slate-200 p-6 md:p-8">
+                <h3 class="font-serif text-2xl text-navy-900">Kirim Pesan</h3>
+                <p class="text-xs text-slate-500 mt-2">Pesan akan dibuka langsung di WhatsApp DEXTRA.</p>
+
+                <label class="block text-xs font-semibold text-slate-600 mt-7 mb-2">Nama</label>
+                <input id="form-name" required type="text" placeholder="Nama kamu" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3.5 text-sm outline-none focus:border-navy-900">
+
+                <label class="block text-xs font-semibold text-slate-600 mt-5 mb-2">Kebutuhan</label>
+                <select id="form-type" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3.5 text-sm outline-none focus:border-navy-900">
+                    <option value="Katalog & harga">Katalog & harga</option>
+                    <option value="Pemesanan parfum">Pemesanan parfum</option>
+                    <option value="Reseller / agen">Reseller / agen</option>
+                    <option value="Supply / kerja sama">Supply / kerja sama</option>
+                </select>
+
+                <label class="block text-xs font-semibold text-slate-600 mt-5 mb-2">Pesan</label>
+                <textarea id="form-message" required rows="4" placeholder="Tulis kebutuhanmu..." class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3.5 text-sm outline-none focus:border-navy-900"></textarea>
+
+                <button type="submit" class="w-full mt-6 py-3.5 rounded-xl bg-navy-900 text-white font-bold text-sm hover:bg-navy-800 transition">
+                    Kirim via WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-navy-950 bg-navy-900 text-slate-400">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 py-14 grid md:grid-cols-3 gap-10">
+        <div>
+            <div class="flex items-center gap-3">
+                <span class="w-10 h-10 rounded-xl bg-gold-500 text-navy-900 flex items-center justify-center font-serif font-bold text-lg">D</span>
+                <div>
+                    <p class="font-bold text-white">DEXTRA</p>
+                    <p class="text-[9px] tracking-[.2em]">SUPPLY & DISTRIBUTION</p>
+                </div>
+            </div>
+            <p class="text-sm leading-7 mt-5 max-w-sm">Mitra terpercaya, solusi terpadu.</p>
+        </div>
+
+        <div>
+            <p class="text-xs font-bold tracking-[.2em] uppercase text-white">Navigasi</p>
+            <div class="grid grid-cols-2 gap-3 mt-5 text-sm">
+                <a href="#beranda" class="hover:text-white">Beranda</a>
+                <a href="#tentang" class="hover:text-white">Tentang</a>
+                <a href="#produk" class="hover:text-white">Produk</a>
+                <a href="#kemitraan" class="hover:text-white">Kemitraan</a>
+                <a href="#kontak" class="hover:text-white">Kontak</a>
+            </div>
+        </div>
+
+        <div>
+            <p class="text-xs font-bold tracking-[.2em] uppercase text-white">Kontak</p>
+            <a href="https://wa.me/6282331865090" target="_blank" class="block mt-5 text-sm hover:text-white">WhatsApp: +62 823-3186-5090</a>
+            <a href="mailto:dextrasupplyd@gmail.com" class="block mt-2 text-sm hover:text-white">dextrasupplyd@gmail.com</a>
+        </div>
+    </div>
+    <div class="border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 py-6 text-center text-xs">
+            © 2026 DEXTRA SUPPLY & DISTRIBUTION. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/6282331865090?text=Halo%20DEXTRA,%20saya%20ingin%20bertanya%20tentang%20produk." target="_blank"
+   class="fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full bg-navy-900 text-gold-500 border border-gold-500/40 shadow-2xl flex items-center justify-center font-bold text-xs hover:scale-105 transition"
+   aria-label="Chat WhatsApp">WA</a>
+
+<script>
+const BRAND = {
+    whatsapp: "6282331865090"
+};
+
+const PRODUCTS = [
+    {
+        name: "Parfum DEXTRA 20ml",
+        size: "20ml",
+        price: "Rp27.500",
+        desc: "Ukuran praktis untuk pemakaian harian atau mencoba aroma sebelum mengambil ukuran lebih besar.",
+        image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=85&w=700"
+    },
+    {
+        name: "Parfum DEXTRA 30ml",
+        size: "30ml",
+        price: "Rp37.500",
+        desc: "Pilihan seimbang untuk penggunaan rutin dengan ukuran yang tetap mudah dibawa.",
+        image: "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=85&w=700"
+    },
+    {
+        name: "Parfum DEXTRA 50ml",
+        size: "50ml",
+        price: "Rp60.000",
+        desc: "Ukuran lebih besar untuk pemakaian rutin dan kebutuhan pelanggan yang lebih intens.",
+        image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=85&w=700"
+    },
+    {
+        name: "Bibit Parfum",
+        size: "Supply",
+        price: "Hubungi",
+        desc: "Pilihan untuk kebutuhan supply dan pengembangan produk. Tanyakan katalog serta ketentuan terbaru.",
+        image: "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&q=85&w=700"
+    },
+    {
+        name: "Paket Usaha DEXTRA",
+        size: "3 Liter",
+        price: "Rp3.900.000",
+        desc: "Paket usaha untuk kebutuhan pengembangan penjualan parfum. Detail isi dan ketentuan dikonfirmasi sebelum order.",
+        image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=85&w=700"
+    },
+    {
+        name: "Supply 1 Liter",
+        size: "Minimal 1L",
+        price: "Rp1.300.000",
+        desc: "Pilihan supply untuk kebutuhan usaha dengan minimum pembelian 1 liter.",
+        image: "https://images.unsplash.com/photo-1615397349754-cfa2066a298e?auto=format&fit=crop&q=85&w=700"
+    }
+];
+
+function waLink(message) {
+    return `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(message)}`;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const grid = document.getElementById("product-grid");
+
+    grid.innerHTML = PRODUCTS.map((p, i) => `
+        <article class="product-card bg-white rounded-3xl border border-slate-200 overflow-hidden flex flex-col">
+            <div class="relative aspect-[4/3] bg-slate-100 overflow-hidden">
+                <img loading="lazy" src="${p.image}" alt="${p.name}" class="w-full h-full object-cover">
+                ${i < 3 ? `<span class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-navy-900 text-gold-400 text-[9px] font-bold uppercase tracking-wider">Parfum</span>` : `<span class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-white/95 text-navy-900 text-[9px] font-bold uppercase tracking-wider">Supply</span>`}
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+                <div class="flex justify-between items-start gap-3">
+                    <div>
+                        <p class="text-[10px] uppercase tracking-[.18em] text-gold-600 font-bold">${p.size}</p>
+                        <h3 class="font-serif text-xl text-navy-900 mt-1">${p.name}</h3>
+                    </div>
+                    <p class="font-bold text-navy-900 whitespace-nowrap">${p.price}</p>
+                </div>
+                <p class="text-xs text-slate-500 leading-6 mt-4 flex-1">${p.desc}</p>
+                <a href="${waLink(`Halo DEXTRA, saya tertarik dengan ${p.name}. Mohon info stok dan detail produknya.`)}" target="_blank"
+                   class="mt-5 w-full text-center py-3 rounded-xl bg-navy-900 text-white text-xs font-bold hover:bg-navy-800 transition">
+                    Tanya / Pesan
+                </a>
+            </div>
+        </article>
+    `).join("");
+
+    const menuBtn = document.getElementById("mobile-menu-btn");
+    const menu = document.getElementById("mobile-menu");
+    const openIcon = document.getElementById("menu-open");
+    const closeIcon = document.getElementById("menu-close");
+
+    menuBtn.addEventListener("click", () => {
+        const closed = menu.classList.contains("hidden");
+        menu.classList.toggle("hidden", !closed);
+        openIcon.classList.toggle("hidden", !closed);
+        closeIcon.classList.toggle("hidden", closed);
+    });
+
+    document.querySelectorAll(".mobile-link").forEach(link => {
+        link.addEventListener("click", () => {
+            menu.classList.add("hidden");
+            openIcon.classList.remove("hidden");
+            closeIcon.classList.add("hidden");
+        });
+    });
+
+    document.getElementById("contact-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = document.getElementById("form-name").value.trim();
+        const type = document.getElementById("form-type").value;
+        const message = document.getElementById("form-message").value.trim();
+        const text = `Halo DEXTRA, saya ${name}.\n\nKebutuhan: ${type}\nPesan: ${message}`;
+        window.open(waLink(text), "_blank");
+    });
+
+    window.addEventListener("scroll", () => {
+        document.getElementById("navbar").classList.toggle("nav-scrolled", window.scrollY > 20);
+    });
+});
+</script>
+</body>
+</html>
